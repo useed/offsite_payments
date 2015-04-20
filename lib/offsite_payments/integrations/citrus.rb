@@ -32,6 +32,7 @@ module OffsitePayments
 
         mapping :checksum, 'secSignature'
         mapping :return_url, 'returnUrl'
+        mapping :cancel_return_url, 'cancelUrl'
 
         SANDBOX_URL = 'https://sandbox.citruspay.com/'.freeze
         STAGING_URL = 'https://stg.citruspay.com/'.freeze
