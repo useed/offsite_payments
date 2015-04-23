@@ -118,6 +118,7 @@ module OffsitePayments #:nodoc:
           # however it does echo any other param so we send it twice.
           add_field 'X-CURRENCY', @currency
           add_field 'X-TEST', @test.to_s
+          add_field 'R_ORDER_ID', options[:order] + @timestamp.now.to_i.to_s
         end
 
         def form_fields
